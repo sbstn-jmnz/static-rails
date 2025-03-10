@@ -5,7 +5,7 @@ module StaticRails
     include RequestForgeryProtectionFallback
 
     def call(req)
-      masked_authenticity_token(req.session)
+      masked_authenticity_token()
     end
 
     private
