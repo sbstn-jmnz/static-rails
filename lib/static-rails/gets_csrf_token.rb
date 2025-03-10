@@ -21,7 +21,7 @@ module StaticRails
     end
 
     def masked_authenticity_token(session, form_options: {})
-      ActionController::RequestForgeryProtection.instance_method(:masked_authenticity_token).bind(self).call(session, form_options: form_options)
+      ActionController::RequestForgeryProtection.instance_method(:masked_authenticity_token).bind(self).call(form_options: form_options)
     end
 
     def global_csrf_token(session)
